@@ -1,10 +1,10 @@
 # Releasing a new version
 
 1. Bump `VERSION` near the top of `install.sh`.
-2. Commit, then tag the commit, using the version from step 1:
+2. Commit, then tag the commit, using the version from step 1. The tag must be annotated (`-a`), or `git push --follow-tags` in step 4 won't push it.
 
    ```bash
-   git tag v1.0.0
+   git tag -a v1.0.0 -m "v1.0.0"
    ```
 
 3. Build the zip from the tag. It contains `install.sh`, `README.md` and `LICENSE` with LF line endings and the executable bit set. `test/` and the git files are left out.
