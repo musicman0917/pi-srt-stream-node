@@ -17,7 +17,7 @@
 #
 set -euo pipefail
 
-readonly VERSION=1.0.0
+readonly VERSION=1.0.1
 readonly MEDIAMTX_REPO=bluenviron/mediamtx
 readonly MEDIAMTX_BIN=/usr/local/bin/mediamtx
 readonly MEDIAMTX_CONF=/usr/local/etc/mediamtx.yml

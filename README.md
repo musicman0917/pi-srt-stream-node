@@ -62,6 +62,18 @@ On your streaming PC:
 4. **Network Buffering:** `1 MB`
 5. Click **OK**
 
+## Matching the delay with your other cameras
+
+The Pi camera reaches OBS a little later than cameras plugged straight into your PC, because its video is encoded, sent over the network and buffered. The gap is usually somewhere between a few hundred milliseconds and about a second, depending on your network and the Network Buffering setting. You'll notice it when you cut between cameras, or when the Pi camera doesn't line up with your mic.
+
+A tool to make this easier is in the works. Until then, you can line things up by hand in OBS:
+
+- **Delay your other cameras.** Right-click a camera source, choose **Filters**, click **+** under Effect Filters and add **Render Delay**. Raise the delay until that camera matches the Pi camera. Each Render Delay filter can add up to 500 ms.
+- **Delay your mic.** The Pi stream has no audio, so your mic will run ahead of the Pi camera's picture. Open **Edit → Advanced Audio Properties** and raise the mic's **Sync Offset**.
+- **Shrink the gap.** Lower **Network Buffering** on the Pi camera's Media Source. Less buffering means less delay, but more stutter on a weak network.
+
+To check your timing, clap where every camera can see you and adjust until the clap lands at the same moment on all of them.
+
 ## Changing settings
 
 All camera settings live in `/etc/srt-camera.conf`:
