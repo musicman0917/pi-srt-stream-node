@@ -1,6 +1,6 @@
 # Pi SRT Stream Node
 
-Turn a Raspberry Pi 4 or 5 and a USB webcam into a low-latency network camera for OBS.
+Turn a Raspberry Pi and a USB webcam into a low-latency network camera for OBS. Recommended for the Raspberry Pi 4 Model B and newer.
 
 ```
  USB webcam ──► ffmpeg (H.264) ──► MediaMTX ──► srt://PI_IP:8890 ──► OBS Media Source
@@ -11,7 +11,8 @@ One script does the whole setup. It installs ffmpeg and MediaMTX, finds your web
 
 ## What you need
 
-- Raspberry Pi 5 or Pi 4 (2 GB or more), a microSD card and the official power supply
+- A Raspberry Pi 4 Model B or newer (recommended), such as the Pi 4B, Pi 400 or Pi 5. Older models may struggle to encode 1080p smoothly.
+- A microSD card and the official power supply
 - A USB webcam that supports MJPEG. Almost all do, for example the Logitech C920, C922 or Brio.
 - A PC running OBS on the same network
 - Ethernet is best. 5 GHz Wi-Fi also works.

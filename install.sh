@@ -183,7 +183,7 @@ preflight() {
 
   case $PI_MODEL in
     *"Pi 4"*|*"Pi 5"*|*"Pi 400"*|*"Pi 500"*|*"Module 4"*|*"Module 5"*) ;;
-    *"Raspberry Pi"*) warn "This guide targets the Pi 4 and Pi 5; older models may struggle to encode 1080p." ;;
+    *"Raspberry Pi"*) warn "Recommended for the Raspberry Pi 4 Model B and newer; older models may struggle to encode 1080p." ;;
     *) warn "This doesn't look like a Raspberry Pi; continuing anyway." ;;
   esac
   if [[ $(uname -m) != aarch64 ]]; then
