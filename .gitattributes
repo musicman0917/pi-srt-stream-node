@@ -1,0 +1,10 @@
+# Shell scripts must keep LF line endings, even when committed from Windows.
+# With CRLF they fail on the Pi with "/usr/bin/env: 'bash\r': No such file or directory".
+*.sh text eol=lf
+Dockerfile text eol=lf
+
+# Left out of the customer zip built with "git archive" (see RELEASING.md).
+/test            export-ignore
+/.gitattributes  export-ignore
+/.gitignore      export-ignore
+/RELEASING.md    export-ignore
